@@ -85,6 +85,42 @@
 	</div>
 	<script>
 	  // your solution here
+    
+    //ROTATE
+    var hammertime = new Hammer(document.getElementById('rotate-box'));
+    hammertime.get('rotate').set({ enable: true });
+    
+    hammertime.on("rotate", function(ev) {
+      $("#rotate-box").css("color", "red");
+    });
+    //PINCH
+    var hammertime = new Hammer(document.getElementById('pinch-box'));
+    hammertime.get('pinch').set({ enable: true });
+    
+    hammertime.on("pinch", function(ev) {
+      $("#pinch-box").css("color", "orange");
+    });
+    //PRESS
+    var hammertime = new Hammer(document.getElementById('press-box'));
+    hammertime.on("press", function(ev) {
+      $("#press-box").css("color", "yellow");
+    });
+    //PAN
+    var hammertime = new Hammer(document.getElementById('pan-box'));
+    hammertime.on("pan", function(ev) {
+      $("#pan-box").css("color", "green");
+    });
+    //TAP
+    var hammertime = new Hammer(document.getElementById('tap-box'));
+    hammertime.on("tap", function(ev) {
+      $("#tap-box").css("color", "blue");
+    });
+    //SWIPE
+    var hammertime = new Hammer(document.getElementById('swipe-box'));
+    hammertime.on("swipe", function(ev) {
+      $("#swipe-box").css("color", "purple");
+    });
+   
   </script>
 </body>
 </html>
